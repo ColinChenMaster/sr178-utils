@@ -38,7 +38,6 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 
-import net.sf.json.JSONObject;
 
 
 @SuppressWarnings("deprecation")
@@ -164,14 +163,14 @@ public class UrlRequestUtils {
 		return null;
 	}
 	
-	public static String executeHttpsByJson(String url,JSONObject jsonObject) {
+	public static String executeHttpsByJson(String url,String jsonStr) {
 		// 请求者
 		HttpPost httpPost = null;
 		// 应答者
 		HttpResponse response = null;
 		try {
 			httpPost = new HttpPost(url);
-			StringEntity stringentity = new StringEntity(jsonObject.toString(),"UTF-8");
+			StringEntity stringentity = new StringEntity(jsonStr,"UTF-8");
 			httpPost.addHeader("content-type", "application/json");
 			httpPost.setEntity(stringentity);
 		} catch (Exception e) {
@@ -212,14 +211,14 @@ public class UrlRequestUtils {
 	 * @param jsonObject
 	 * @return
 	 */
-	public static String executeHttpByJson(String url,JSONObject jsonObject) {
+	public static String executeHttpByJson(String url,String jsonStr) {
 		// 请求者
 		HttpPost httpPost = null;
 		// 应答者
 		HttpResponse response = null;
 		try {
 			httpPost = new HttpPost(url);
-			StringEntity stringentity = new StringEntity(jsonObject.toString(),"UTF-8");
+			StringEntity stringentity = new StringEntity(jsonStr,"UTF-8");
 			httpPost.addHeader("content-type", "application/x-www-form-urlencoded");
 			httpPost.setEntity(stringentity);
 		} catch (Exception e) {
@@ -614,14 +613,14 @@ public class UrlRequestUtils {
 	 * @param jsonObject
 	 * @return
 	 */
-	public static String executeHttpByJsonTengxun(String url, JSONObject jsonObject, String sessionId, String sessionType, String orgLoc) {
+	public static String executeHttpByJsonTengxun(String url, String jsonStr, String sessionId, String sessionType, String orgLoc) {
 		// 请求者
 		HttpPost httpPost = null;
 		// 应答者
 		HttpResponse response = null;
 		try {
 			httpPost = new HttpPost(url);
-			StringEntity stringentity = new StringEntity(jsonObject.toString(),"UTF-8");
+			StringEntity stringentity = new StringEntity(jsonStr,"UTF-8");
 			httpPost.addHeader("content-type", "application/json");
 			httpPost.setHeader("Cookie", "session_id=" + URLEncoder.encode(sessionId) + ";session_type=" + URLEncoder.encode(sessionType) + ";org_loc=" + URLEncoder.encode(orgLoc)); // cookie
 			httpPost.setEntity(stringentity);

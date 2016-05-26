@@ -6,6 +6,7 @@
   <name>工具类</name>
   <description>工具类</description>
     <properties>
+        <version.fastjson>1.1.15</version.fastjson>
         <version.log4j>1.2.15</version.log4j>
         <version.slf4j>1.5.0</version.slf4j>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -62,11 +63,42 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		 <dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>17.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>${version.fastjson}</version>
+			</dependency>
+					<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.5</version>
+		</dependency>
 		 <dependency>    
-		    <groupId>net.sf.json-lib</groupId>    
-		    <artifactId>json-lib</artifactId>    
-		    <version>2.4</version>    
-		    <classifier>jdk15</classifier>    
-		</dependency>  
+            <groupId>net.sf.json-lib</groupId>    
+            <artifactId>json-lib</artifactId>    
+            <version>2.4</version>    
+            <classifier>jdk15</classifier>    
+        </dependency>  
+		
 	</dependencies>
+	<repositories>
+		<repository>
+		<id>opensesame</id>
+		<name>Alibaba OpenSource Repsoitory</name>
+		<url>http://code.alibabatech.com/mvn/releases/</url>
+		<snapshots>
+		<enabled>false</enabled>
+		</snapshots>
+		</repository>
+     </repositories>
 </project>
