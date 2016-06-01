@@ -29,6 +29,11 @@
 	</build>
 
 	<dependencies>
+	    <dependency>
+            <groupId>com.sr178.game</groupId>
+            <artifactId>game-frame</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+  	    </dependency>
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
