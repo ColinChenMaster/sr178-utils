@@ -86,8 +86,8 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
-			return null;
-		} finally {
+			throw new RuntimeException(e);
+			} finally {
 			pool.returnResource(jedis);
 		}
 	}
@@ -100,7 +100,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
-			return null;
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -125,6 +125,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -149,6 +150,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -167,6 +169,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -183,6 +186,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -203,6 +207,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -219,6 +224,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -240,11 +246,10 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
-
-		return 0;
 	}
 
 	/**
@@ -264,7 +269,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
-			return null;
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -283,6 +288,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -302,11 +308,10 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
-
-		return false;
 	}
 
 	/**
@@ -324,6 +329,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -337,6 +343,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -356,6 +363,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -376,7 +384,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
-			return null;
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -396,7 +404,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
-			return null;
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -417,10 +425,10 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
-		return 0;
 	}
 
 	/**
@@ -437,6 +445,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
@@ -456,7 +465,7 @@ public class JedisUtils {
 		} catch (Exception e) {
 			LOG.error(e.getMessage(), e);
 			pool.returnBrokenResource(jedis);
-			return null;
+			throw new RuntimeException(e);
 		} finally {
 			pool.returnResource(jedis);
 		}
