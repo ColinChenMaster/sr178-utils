@@ -53,7 +53,7 @@ public class JedisUtils {
 		// config.setMaxActive(1024);
 	}
 
-	private static JedisPool getPool() {
+	public static JedisPool getPool() {
 		return pools.get(RandomUtils.nextInt(poolCount));
 	}
 
