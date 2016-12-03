@@ -131,7 +131,8 @@ public class ExportExcel<T>
 			HSSFRichTextString text = new HSSFRichTextString(headers[i]);
 			cell.setCellValue(text);
 		}
-
+		HSSFFont font3 = workbook.createFont();
+		font3.setColor(HSSFColor.BLUE.index);
 		// 遍历集合数据，产生数据行
 		Iterator<T> it = dataset.iterator();
 		int index = 0;
@@ -231,8 +232,7 @@ public class ExportExcel<T>
 						{
 							HSSFRichTextString richString = new HSSFRichTextString(
 									textValue);
-							HSSFFont font3 = workbook.createFont();
-							font3.setColor(HSSFColor.BLUE.index);
+
 							richString.applyFont(font3);
 							cell.setCellValue(richString);
 						}
